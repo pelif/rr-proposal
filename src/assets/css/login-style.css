@@ -1,0 +1,13 @@
+body {
+    padding:0; 
+    background-image: url('./../images/background-login.jpg');
+    background-size: 100%;
+    background-color:red; 
+}
+
+.login-content {
+    width:50%; 
+    height:auto; 
+    margin: 0 auto 0 auto; 
+    background:#333; 
+}
