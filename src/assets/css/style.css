@@ -1,0 +1,40 @@
+.rr-navbar-top {
+    background-color: #002A84; 
+    -webkit-box-shadow: 2px 5px 5px 3px rgba(0,0,0,0.7);
+    -moz-box-shadow: 2px 5px 5px 3px rgba(0,0,0,0.7);
+    box-shadow: 2px 5px 5px 3px rgba(0,0,0,0.7);
+    padding:0;
+}
+
+.rr-navbar-top a {
+    color:white;
+
+}
+
+.rr-navbar-top a:hover {
+    color:#999;
+}
+
+li.nav-item {
+    background:none;
+    transition:1s;
+}
+
+li.nav-item:hover {
+    background:#005A9c; 
+    background-size:100%
+}
+
+.dropdown-menu {
+    background-color: #002A84;
+}
+
+a.dropdown-item {
+    background:none;
+    transition:1s;
+}
+
+a.dropdown-item:hover {
+    background:#005A9c; 
+    background-size:100%
+}

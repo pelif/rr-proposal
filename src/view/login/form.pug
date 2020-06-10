@@ -6,6 +6,23 @@ html
         script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
         link(rel="stylesheet" href="http://localhost:3000/assets/css/login-style.css")
+        title rr-proposal
 
-    body 
-        h1 Hello    
+    body
+        div.bg-container 
+        div.container-login
+            form(action="/login/find", method="post")
+            div.top-login
+                img(src="http://localhost:3000/assets/images/logo.png", width="70", height="70")
+                br
+                span.font-weight-bold Sistema de Propostas
+            br                
+            div.row.container-form-login
+                div.form-group.col-md-12
+                    input.form-control(type="text", name="username", placeholder="Nome de usuário")
+                br    
+                div.form-group.col-md-12    
+                    input.form-control(type="password", name="password", placeholder="Sua Senha")
+                button.btn.btn-success.col-md-12(type="submit")  Entrar
+
+

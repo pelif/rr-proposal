@@ -1,8 +1,37 @@
-doctype html
 html 
     head
-        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+        title RR Propostas
+    body
+        nav.navbar.navbar-expand-lg.rr-navbar-top
+            a.navbar-brand(href="http://localhost:3000") 
+                img(
+                    src="http://localhost:3000/assets/images/logo.png",
+                    width="60", 
+                    height="60")
+            button.navbar-toggler(type="button",
+                                  data-toggle="collapse", 
+                                  data-target="#navbarNav", 
+                                  aria-controls="navbarNav", 
+                                  aria-expanded="false", 
+                                  aria-label="Toggle navigation")
+                span.navbar-toggler-icon  
+            div.collapse.navbar-collapse#navbarNav
+                ul.navbar-nav
+                    li.nav-item(active) 
+                        a.nav-link(href="#") Usuários 
+                            span.sr-only (current)      
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle#navbarDropdownMenuLink(
+                            href="#", 
+                            data-toggle="dropdown", 
+                            aria-expanded="false") Propostas
+                            div.dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
+                                a.dropdown-item(href="/proposal/new") Nova Proposta
+                                a.dropdown-item(href="/proposal/list") Consultar Propostas
         script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
         script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
-        link(rel="stylesheet" href="http://localhost:3000/assets/css/login-style.css")
+        link(rel="stylesheet" href="http://localhost:3000/assets/css/style.css")
+
+        block content
