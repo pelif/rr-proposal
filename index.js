@@ -6,6 +6,7 @@ import methodOverride from 'method-override'
 import cors from 'cors' 
 import passport from 'passport' 
 import session from 'express-session' 
+import mongoose from 'mongoose'
 
 const app = express()
 
@@ -26,7 +27,13 @@ app.set('views', path.join(__dirname, 'src/view'))
 app.use('/assets', express.static('src/assets'))
 
 require('dotenv-safe').config()
-require('./src/model/index')
+
+let db = mongoose.connect(process.env.CONN, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+mongoose.Promise = global.Promise
+
 require('./src/index')(app)
 
 app.listen(3000, () => {
