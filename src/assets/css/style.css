@@ -15,7 +15,12 @@ body {
     -webkit-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.7);
     -moz-box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.7);
     box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.7);
-    padding:12px;
+    padding:30px;
+}
+
+.app-container-forms {
+    width:70%; 
+    margin: 0 auto 0 auto; 
 }
 
 .rr-navbar-top {
@@ -57,4 +62,20 @@ a.dropdown-item {
 a.dropdown-item:hover {
     background:#005A9c; 
     background-size:100%
+}
+
+.column-forms {
+    width:48%;
+    float:left;
+    padding:5px;
+    margin-left:14px;
+}
+
+.small-labels {
+    font-size:0.6em;
+}
+
+.btn-items {
+    float:left;
+    margin-left:10px;
 }

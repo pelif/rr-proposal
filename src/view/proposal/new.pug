@@ -1,0 +1,88 @@
+extends ./../layout/main
+
+block content 
+    div.app-body-content
+        div.app-container-forms
+            h3 Cadastrar Nova Proposta
+                h5 Dados do Cliente
+                    form(action="/proposal/create", method="post")
+                        div.column-forms
+                            div.form-group.mg-top-10
+                                input.form-control(
+                                    type="text", 
+                                    name="client", 
+                                    placeholder="Nome do Cliente")
+                            div.form-group.mg-top-10
+                                input.form-control(
+                                    type="text", 
+                                    name="document", 
+                                    placeholder="Digite o CNPJ") 
+                            div.form-group 
+                                input.form-control(
+                                    type="text", 
+                                    name="address", 
+                                    placeholder="Endereço do Cliente")        
+                            div.form-group 
+                                input.form-control(
+                                    type="text", 
+                                    name="city", 
+                                    placeholder="Cidade") 
+
+                        div.column-forms
+                            div.form-group.mg-top-10
+                                input.form-control(
+                                    type="text", 
+                                    name="Contact", 
+                                    placeholder="Digite o nome de um contato")
+                            div.form-group
+                                input.form-control(
+                                    type="text", 
+                                    name="email", 
+                                    placeholder="Digite um e-mail para contato") 
+                            div.form-group 
+                                input.form-control(
+                                    type="text", 
+                                    name="phone", 
+                                    placeholder="Digite o telefone (11)99999-9999")        
+                            div.form-group 
+                                input.form-control(
+                                    type="text", 
+                                    name="responsible_techinician")  
+            
+                        h5 Dados da Proposta            
+                        div.column-forms  
+                            div.form-group
+                                label.small-labels(for="number") Número da Proposta
+                                input.form-control(
+                                    type="text", 
+                                    name="number",                                     
+                                    id="number")//- inserir concatenação do ultimo número vindo do banco  
+                                    span Número da Proposta
+                            div.form-group 
+                                label.small-labels(for="items") Items da Proposta
+                                br
+                                button.btn.btn-primary.btn-items(type="button", alt="Adicionar Items") +
+                                button.btn.btn-primary.btn-items(type="button", alt="Remover Items") - 
+                                input.form-control.col-md-6(
+                                    type="text", 
+                                    name="items", 
+                                    id="items")
+                                br 
+                                label.small-labels(for="amount") Quantidade de Sombreadores
+                                input.form-control.col-md-3(
+                                    type="text", 
+                                    name="amount")
+                                label.small-labels(for="length") Comprimento
+                                input.form-control.col-md-3(
+                                    type="text", 
+                                    name="length")
+                                label.small-labels(for="width") Largura
+                                input.form-control.col-md-3(
+                                    type="text", 
+                                    name="width")
+                                label.small-labels(for="width") Altura
+                                input.form-control.col-md-3(
+                                    type="text", 
+                                    name="height")
+                        button.btn.btn-success.col-md-12.font-weight-bold(type="submit") Cadastrar Proposta
+                        //- Atentar para formas de pagamento e valor da proposta na imagem

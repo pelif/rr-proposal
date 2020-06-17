@@ -7,4 +7,5 @@ module.exports  = (app) => {
     app.use('/login', loginIndex)
     app.use('/', home)
     app.use('/users', users)
+    app.use('/proposal', proposal)
 }

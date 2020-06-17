@@ -1,5 +1,23 @@
 extends ./../layout/main
 
 block content 
-    h3 Cadastro de Novo Usuário
-    div.row.container-app
+    div.app-body-content
+        div.app-container-forms
+            h3 Cadastrar Novo Usuário                    
+                form(action="/users/create", method="post")
+                    div.form-group.mg-top-10
+                        input.form-control.col-md-8(
+                            type="text", 
+                            name="name", 
+                            placeholder="Digite o Nome")
+                    div.form-group.mg-top-10
+                        input.form-control.col-md-8(
+                            type="text", 
+                            name="username", 
+                            placeholder="Digite o nome de Usuário (Login)") 
+                    div.form-group 
+                        input.form-control.col-md-8(
+                            type="password", 
+                            name="password", 
+                            placeholder="Digite a senha do usuário")        
+                    button.btn.btn-success.col-md-8.font-weight-bold(type="submit") Cadastrar

@@ -1,6 +1,27 @@
 extends ./../layout/main
 
 block content 
-    div.app-body-content
-        h3 Cadastro de Novo Usuário
+    div.app-body-content       
+        h3 Usuários Cadastrados
+        if msg 
+            div.alert.alert-danger #{msg}
+        div.row
+            a.btn.btn-primary.font-weight-bold(href="/users/new") Criar Novo Usuário            
+            table.table.table-striped
+                thead.thead-dark 
+                    tr 
+                        th Nome
+                        th Nome de Usuário
+                        th Ações
+                tbody 
+                    each users in data
+                        tr 
+                            td= users.name 
+                            td= users.useraname
+                            td  
+                                form(action="/users/"+users.id+"?_method=DELETE", method="POST")
+                                    //- input(type="hidden", name="_method", value="DELETE")
+                                    //- input(type="hidden", name="id", value=users.id)
+                                    button.btn.btn-danger(type="submit") Deletar
+                                        
     
