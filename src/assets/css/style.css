@@ -79,3 +79,10 @@ a.dropdown-item:hover {
     float:left;
     margin-left:10px;
 }
+
+.btn-items-small {
+    float:left; 
+    padding:5px;    
+    font-weight: bold; 
+    width:35px;
+}
