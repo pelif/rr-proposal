@@ -68,8 +68,8 @@ block content
                                 div#items-content
                                     input.form-control.col-md-12(
                                         type="text", 
-                                        name="items[]", 
-                                        id="items[]", 
+                                        name="items", 
+                                        id="items", 
                                         placeholder="Digite o Item aqui")
                                     br 
                                 h5.font-weight-bold Quantidade e medida de Sombreadores
@@ -87,13 +87,13 @@ block content
                                     tbody#items-list-content
                                         tr 
                                             td 
-                                                input.form-control(type="text", name="amount[]") 
+                                                input.form-control(type="text", name="amount") 
                                             td 
-                                                input.form-control(type="text", name="length[]")
+                                                input.form-control(type="text", name="length")
                                             td
-                                                input.form-control(type="text", name="width[]")
+                                                input.form-control(type="text", name="width")
                                             td(colspan="2")
-                                                input.form-control(type="text", name="height[]")
+                                                input.form-control(type="text", name="height")
                                 
                         button.btn.btn-success.col-md-12.font-weight-bold(type="submit") Cadastrar Proposta
                         script(src="http://localhost:3000/assets/scripts/proposal.js")                        

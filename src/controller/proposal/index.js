@@ -8,5 +8,6 @@ import remove from './remove'
 const router = express.Router()
 
 router.get('/new', newProposal)
+router.post('/create', create)
 
 export default router

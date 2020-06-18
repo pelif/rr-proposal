@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-let proposalData = new Schema({
+const proposalData = new mongoose.Schema({
     number: {
         type: String, 
         required: true
@@ -11,7 +11,7 @@ let proposalData = new Schema({
             required: true
         }
     }], 
-    average: {
+    shaders: [{
         length: {
             type: Number, 
             required: true
@@ -23,12 +23,12 @@ let proposalData = new Schema({
         height: {
             type: Number, 
             required: true
+        }, 
+        amount: {
+            type: Number, 
+            required: true
         }
-    }, 
-    amount: {
-        type: Number, 
-        required: true
-    }
+    }]
 })
 
 const Proposal = new mongoose.Schema({

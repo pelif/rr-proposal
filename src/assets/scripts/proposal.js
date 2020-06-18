@@ -3,8 +3,8 @@ $(function() {
     $("#addItem").on("click", function() {
         let item = `<input class="form-control col-md-12" 
                     type="text"  
-                    name="items[]"  
-                    id="items[]"  
+                    name="items"  
+                    id="items"  
                     placeholder="Digite o Item aqui">
         <br>`; 
 
@@ -24,16 +24,16 @@ $(function() {
         let register = `
             <tr>
               <td>
-                <input class="form-control" type="text" name="amount[]">
+                <input class="form-control" type="text" name="amount">
               </td>
               <td>
-                <input class="form-control" type="text" name="length[]">
+                <input class="form-control" type="text" name="length">
               </td>
               <td>
-                <input class="form-control" type="text" name="width[]">
+                <input class="form-control" type="text" name="width">
               </td>
               <td colspan="2">
-                <input class="form-control" type="text" name="height[]">
+                <input class="form-control" type="text" name="height">
               </td>
             </tr>`; 
 
