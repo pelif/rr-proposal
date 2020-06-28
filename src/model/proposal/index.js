@@ -1,36 +1,5 @@
 import mongoose from 'mongoose'
 
-const proposalData = new mongoose.Schema({
-    number: {
-        type: String, 
-        required: true
-    }, 
-    items: [{
-        description: {
-            type: String, 
-            required: true
-        }
-    }], 
-    shaders: [{
-        length: {
-            type: Number, 
-            required: true
-        }, 
-        width: {
-            type: Number, 
-            required: true
-        }, 
-        height: {
-            type: Number, 
-            required: true
-        }, 
-        amount: {
-            type: Number, 
-            required: true
-        }
-    }]
-})
-
 const Proposal = new mongoose.Schema({
     client: {
         type: String, 
@@ -47,21 +16,45 @@ const Proposal = new mongoose.Schema({
         type: String, 
         required: true
     }, 
+    state: {
+        type: String, 
+        required: true
+    },
     contact: {
         type: String        
     }, 
     email: {
-        type: String        
+        type: String, 
+        default: null        
     }, 
     phone: {
         type: String, 
         required: true
     }, 
+    phone2: {
+        type: String, 
+        default: null
+    },
     responsible_techinician: {
         type: String, 
         required: true
     }, 
-    proposal: proposalData   
+    value: {
+        type: Number, 
+        required: true
+    }, 
+    proposal_number: {
+        type: String, 
+        required: true
+    }, 
+    proposal_details_items: [{
+        type: String
+    }], 
+    proposal_shaders: [], 
+    created_at: {
+        type: Date, 
+        default: Date.now
+    }
 })
 
 export default mongoose.model('Proposal', Proposal)

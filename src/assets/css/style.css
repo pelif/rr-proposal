@@ -86,3 +86,8 @@ a.dropdown-item:hover {
     font-weight: bold; 
     width:35px;
 }
+
+.container-workaround {
+    width:80%; 
+    border:1px solid red;
+}

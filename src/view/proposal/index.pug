@@ -1,0 +1,27 @@
+extends ./../layout/main
+
+block content 
+    div.app-body-content
+        h3 Propostas Cadastradas
+            table.table.table-striped
+                thead                    
+                    tr
+                        th Cliente
+                        th Cnpj
+                        th Endereço
+                        th E-mail
+                        th Telefone
+                        th Ações
+                tbody 
+                    each proposal in proposals
+                        tr 
+                            td= proposal.proposal_number + " / " + proposal.client
+                            td= proposal.document
+                            td= proposal.address + " / " + proposal.city
+                            td= proposal.email
+                            td= proposal.phone
+                            td
+                                a.btn.btn-dark.btn-items(href="proposal/view/"+proposal._id, target="_blank") Ver
+                                a.btn.btn-success.btn-items(href="proposal/edit/"+proposal._id) Editar                                                                
+
+                    

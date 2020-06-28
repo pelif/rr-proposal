@@ -8,7 +8,9 @@ import passport from 'passport'
 import session from 'express-session' 
 import mongoose from 'mongoose'
 
+
 const app = express()
+app.locals.moment = require('moment')
 
 app.use(cors())
 app.use(morgan('dev'))

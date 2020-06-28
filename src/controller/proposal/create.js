@@ -1,34 +1,33 @@
 import Proposal from './../../model/proposal/index'
 
 export default (req, res) => {
-       
-    let proposal = {}; 
-    proposal.items = new Array();
-    proposal.shaders = new Array();
-    proposal.number = req.body.number; 
+    
+    let items = new Array();
+    let shaders = new Array();    
     req.body.responsible_techinician = 'RAFAEL DANIEL'; 
     
-    for(let item in req.body.items) {          
-        proposal.items.push([{description: req.body.items[item]}])
-    }    
+    for(let item in req.body.proposal_details_items) {          
+        items.push(req.body.proposal_details_items[item])
+    }        
 
     for(let key in req.body.amount) {
-        proposal.shaders.push([
-            { amount: req.body.amount[key] }, 
-            { length: req.body.length[key] }, 
-            { width: req.body.width[key] }, 
-            { height: req.body.height[key] }
-        ])
+        shaders.push({
+            "amount": req.body.amount[key], 
+            "length": req.body.length[key], 
+            "width":  req.body.width[key], 
+            "height": req.body.height[key], 
+            "color": req.body.color[key]
+        })
     }   
 
-    req.body.proposal = proposal
+    req.body.proposal_details_items = items
+    req.body.proposal_shaders = shaders    
 
     delete req.body.items 
     delete req.body.amount 
     delete req.body.length 
     delete req.body.width
-    delete req.body.height
-    delete req.body.number
+    delete req.body.height    
 
     let proposalModel = new Proposal(req.body)
 
@@ -40,7 +39,6 @@ export default (req, res) => {
                     return res.redirect('/proposal/new')
                 }
             }
-
             if(res.status(201)) {
                 return res.redirect('/proposal')
             }

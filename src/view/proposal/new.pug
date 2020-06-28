@@ -11,7 +11,8 @@ block content
                                 input.form-control(
                                     type="text", 
                                     name="client", 
-                                    placeholder="Nome do Cliente")
+                                    placeholder="Nome do Cliente", 
+                                    required)
                             div.form-group.mg-top-10
                                 input.form-control(
                                     type="text", 
@@ -26,13 +27,21 @@ block content
                                 input.form-control(
                                     type="text", 
                                     name="city", 
-                                    placeholder="Cidade") 
+                                    placeholder="Cidade", 
+                                    required) 
+                            div.form-group
+                                input.form-control(
+                                    type="text", 
+                                    name="state", 
+                                    size="4",
+                                    placeholder="Estado", 
+                                    required)
 
                         div.column-forms
                             div.form-group.mg-top-10
                                 input.form-control(
                                     type="text", 
-                                    name="Contact", 
+                                    name="contact", 
                                     placeholder="Digite o nome de um contato")
                             div.form-group
                                 input.form-control(
@@ -43,20 +52,36 @@ block content
                                 input.form-control(
                                     type="text", 
                                     name="phone", 
+                                    placeholder="Digite o telefone (11)99999-9999", 
+                                    required)        
+                            div.form-group 
+                                input.form-control(
+                                    type="text", 
+                                    name="phone2", 
                                     placeholder="Digite o telefone (11)99999-9999")        
                             div.form-group 
                                 input.form-control(
                                     type="text", 
-                                    name="responsible_techinician")  
-            
+                                    name="responsible_techinician", 
+                                    placeholder="Responsável Técnico")  
+                        
                         h5 Dados da Proposta            
-                        div.column-forms  
+                        div.container  
                             div.form-group
-                                label.small-labels(for="number") Número da Proposta
+                                label.small-labels(for="value") Valor R$
+                                    input.form-control(
+                                        type="text", 
+                                        name="value", 
+                                        id="value", 
+                                        required)
+                            div.form-group
+                                label.small-labels(for="proposal_number") Número da Proposta
                                 input.form-control(
                                     type="text", 
-                                    name="number",                                     
-                                    id="number")//- inserir concatenação do ultimo número vindo do banco  
+                                    name="proposal_number",                                     
+                                    id="proposal_number",                                      
+                                    required, 
+                                    value="101111")//- inserir concatenação do ultimo número vindo do banco  
                                     span Número da Proposta
                             div.form-group
                                 label.small-labels.font-weight-bold(for="items") Items da Proposta
@@ -68,8 +93,8 @@ block content
                                 div#items-content
                                     input.form-control.col-md-12(
                                         type="text", 
-                                        name="items", 
-                                        id="items", 
+                                        name="proposal_details_items", 
+                                        id="proposal_details_items", 
                                         placeholder="Digite o Item aqui")
                                     br 
                                 h5.font-weight-bold Quantidade e medida de Sombreadores
@@ -80,6 +105,7 @@ block content
                                             th Comprimento
                                             th Largura
                                             th Altura
+                                            th Cor
                                             th 
                                                 button.btn.btn-primary.btn-items-small(type="button", id="addSombra", alt="Adicionar Items") +
                                             th     
@@ -92,8 +118,10 @@ block content
                                                 input.form-control(type="text", name="length")
                                             td
                                                 input.form-control(type="text", name="width")
-                                            td(colspan="2")
+                                            td
                                                 input.form-control(type="text", name="height")
+                                            td(colspan="2")
+                                                input.form-control(type="text", name="color") 
                                 
                         button.btn.btn-success.col-md-12.font-weight-bold(type="submit") Cadastrar Proposta
                         script(src="http://localhost:3000/assets/scripts/proposal.js")                        

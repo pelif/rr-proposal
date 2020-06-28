@@ -1,0 +1,74 @@
+extends ./../layout/print_main
+
+block content     
+    div.rr-top-bar
+        img(src="http://localhost:3000/assets/images/logo.png",
+            width="60", 
+            height="60")
+        div.rr-proposal-data 
+            strong Proposta: 
+            span #{proposal.proposal_number}
+            br 
+            strong Data:         
+            span #{moment(proposal.created_at).format('DD/MM/YYYY')}
+    table.table.table-bordered       
+        tbody 
+            tr 
+                td 
+                    strong Solicitante: 
+                    span #{proposal.client}
+                td 
+                    strong Contato: 
+                    span #{proposal.contact}
+                td 
+                    strong Telefone: 
+                    span #{proposal.phone + " / " + proposal.phone2}
+            tr 
+                td 
+                    strong Cidade: 
+                    span #{proposal.city}
+                td 
+                    strong Estado:   
+                    span #{proposal.state}   
+                td 
+                    strong E-mail: 
+                    span #{proposal.email}
+            tr
+                td(colspan="3", style="background-color: rgb(90, 188, 221);")     
+                    strong Responsável Técnico: 
+                    span #{proposal.responsible_techinician}            
+            
+            tr 
+                td(colspan="3")
+                    strong Items da Proposta: 
+                    br
+                    br
+                    each item, index in proposal.proposal_details_items 
+                        span= item   
+                        br    
+            tr 
+                td(colspan="3") 
+                    strong Detalhes das Coberturas
+                    br 
+                    br 
+                    each shader, index in proposal.proposal_shaders 
+                        div.container-shader
+                            div.box-shader-data
+                                span.style-height #{shader.height} m
+                                img(src="http://localhost:3000/assets/images/lateral_shader2.png", 
+                                    width="210", 
+                                    height="185")
+                            div.box-shader-data 
+                                div.length-left-content 
+                                    div.style-length #{shader.length} m
+                                    img(src="http://localhost:3000/assets/images/up_shader.png", 
+                                        width="210", 
+                                        height="152")
+                                div.length-right-content #{shader.width} m
+                            div.box-shaders-data 
+                                span Quantidade: #{shader.amount}      
+                                br                                       
+                                span Cor: #{shader.color}
+
+
+            

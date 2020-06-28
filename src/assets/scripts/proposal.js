@@ -3,8 +3,8 @@ $(function() {
     $("#addItem").on("click", function() {
         let item = `<input class="form-control col-md-12" 
                     type="text"  
-                    name="items"  
-                    id="items"  
+                    name="proposal_details_items"  
+                    id="proposal_details_items"  
                     placeholder="Digite o Item aqui">
         <br>`; 
 
@@ -32,8 +32,11 @@ $(function() {
               <td>
                 <input class="form-control" type="text" name="width">
               </td>
-              <td colspan="2">
+              <td>
                 <input class="form-control" type="text" name="height">
+              </td>
+              <td colspan="2">
+                <input class="form-control" type="text" name="color">
               </td>
             </tr>`; 
 
