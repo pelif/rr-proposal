@@ -21,7 +21,9 @@ block content
                             td= proposal.email
                             td= proposal.phone
                             td
-                                a.btn.btn-dark.btn-items(href="proposal/view/"+proposal._id, target="_blank") Ver
-                                a.btn.btn-success.btn-items(href="proposal/edit/"+proposal._id) Editar                                                                
+                                a.btn.btn-dark.btn-items(href="proposal/view/"+proposal._id, target="_blank") Ver                                
+                                form.btn-items(action="/proposal/" + proposal._id + "?_method=DELETE", method="POST")
+                                    button.btn.btn-danger(type="submit") Excluir 
+
 
                     

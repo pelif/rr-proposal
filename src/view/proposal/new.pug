@@ -74,6 +74,26 @@ block content
                                         name="value", 
                                         id="value", 
                                         required)
+                            div.form-group 
+                                label.small-labels(for="form_payment") Forma de Pagamento
+                                    input.form-control(
+                                        type="text", 
+                                        name="form_payment", 
+                                        id="form_payment")
+                            div.form-group 
+                                label.small-labels(for="delivery_time") Tempo de Entrega
+                                    input.form-control(
+                                        type="text", 
+                                        name="delivery_time", 
+                                        id="delivery_time", 
+                                        value="De 15 a 30 dias")
+                            div.form-group 
+                                label.small-labels(for="proposal_validity") Validade da Proposta
+                                    input.form-control(
+                                        type="text", 
+                                        name="proposal_validity", 
+                                        id="proposal_validity", 
+                                        value="45 Dias")            
                             div.form-group
                                 label.small-labels(for="proposal_number") Número da Proposta
                                 input.form-control(
@@ -121,7 +141,12 @@ block content
                                             td
                                                 input.form-control(type="text", name="height")
                                             td(colspan="2")
-                                                input.form-control(type="text", name="color") 
+                                                select.form-control(name="color")
+                                                    option(value="azul" selected) Azul
+                                                    option(value="amarelo") Amarelo
+                                                    option(value="verde") Verde
+                                                    option(value="vermelho") Vermelho
+                                                    option(value="prata") Prata                                                
                                 
                         button.btn.btn-success.col-md-12.font-weight-bold(type="submit") Cadastrar Proposta
                         script(src="http://localhost:3000/assets/scripts/proposal.js")                        

@@ -28,30 +28,59 @@ body {
     float:left;
 }
 
+.container-shader header {
+    font-size:0.95em;
+}
+
 .box-shader-data {
     width: 30%;
-    float:left;       
+    float:left; 
+    margin-left:12px;          
+}
+
+.box-shader-data footer {
+    text-align:center;
+    font-weight:bold;    
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.box-shader-data header {    
+    font-weight:bold;
+    margin-left:10%;    
+    width:185px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    text-align:center;
 }
 
 .style-height {
     writing-mode:vertical-lr;
-    font-size: 1.8em;
-    font-weight:bold;
-    border-left: 2px solid #999;    
+    font-size: 1em;
+    font-weight:bold;    
+    height:30%;       
+    padding:0;
+    float:left;
+    text-decoration:underline;
+    text-align:center;
+}
+
+.image-box-shader {
+    float:left;   
+    width:90%; 
 }
 
 .style-length {
-    font-size: 1.8em;
+    font-size: 1em;
     font-weight:bold;
     width:25%;
-    border-bottom:2px solid #999;
+    text-decoration: underline;
 }
 
 .style-width {
     writing-mode:vertical-lr;
-    font-size: 1.8em;
-    font-weight:bold;
-    border-left: 2px solid #999;    
+    font-size: 1em;
+    font-weight:bold;    
     text-align:center; 
     border:1px solid green; 
     height:60px;
@@ -65,9 +94,42 @@ body {
 .length-right-content {
     float:left;    
     writing-mode: vertical-lr;
-    font-size: 1.8em;
+    font-size: 1em;
     font-weight:bold;
     height:35%;    
     margin-top:20%;
 }
 
+.incluso {
+    font-size:0.75em;    
+}
+
+.contact-style {
+    background-color: lightseagreen; 
+    color: white;
+    font-size:1em;
+    font-weight:bold;
+    padding:5px;
+}
+
+/* .table tbody tr td, .table thead tr td { */
+.table tbody tr td, .table thead tr td {
+    padding:4px;
+    font-size:0.74em;
+}
+
+.style-total-value {
+    background-color: lightseagreen; 
+    color: white;
+    font-size: 1.25em;
+    font-weight:bold;
+    padding:12px 0;
+}
+
+.footer-print {
+    background-color:#002A84; 
+    padding:4px;
+    font-size:1.1em;
+    color:white;
+    text-align:center;
+}

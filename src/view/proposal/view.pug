@@ -11,7 +11,7 @@ block content
             br 
             strong Data:         
             span #{moment(proposal.created_at).format('DD/MM/YYYY')}
-    table.table.table-bordered       
+    table.table.table-bordered.my-table      
         tbody 
             tr 
                 td 
@@ -52,23 +52,97 @@ block content
                     br 
                     br 
                     each shader, index in proposal.proposal_shaders 
-                        div.container-shader
-                            div.box-shader-data
-                                span.style-height #{shader.height} m
-                                img(src="http://localhost:3000/assets/images/lateral_shader2.png", 
-                                    width="210", 
-                                    height="185")
+                        div.container-shader    
+                            header 
+                                strong Altura: 
+                                span #{shader.height} m 
+                                strong Largura: 
+                                span #{shader.width} m 
+                                strong Comprimento: 
+                                span #{shader.length} m 
+                                strong Quantidade: 
+                                span #{shader.amount} 
+                                strong Cor: 
+                                span #{shader.color} 
+                            div.box-shader-data                                
+                                //- span.style-height #{shader.length} m                                
+                                img(src="http://localhost:3000/assets/images/vi_" + shader.color + ".png", 
+                                    width="200", 
+                                    height="220")  
+                                //- footer #{shader.width} m
                             div.box-shader-data 
-                                div.length-left-content 
-                                    div.style-length #{shader.length} m
-                                    img(src="http://localhost:3000/assets/images/up_shader.png", 
-                                        width="210", 
-                                        height="152")
-                                div.length-right-content #{shader.width} m
-                            div.box-shaders-data 
-                                span Quantidade: #{shader.amount}      
-                                br                                       
-                                span Cor: #{shader.color}
+                                //- div.style-height #{shader.height} m                                
+                                img(src="http://localhost:3000/assets/images/visao2_" + shader.color + ".png", 
+                                        width="300", 
+                                        height="235")                                
+                            div.box-shader-data                                 
+                                    img(src="http://localhost:3000/assets/images/visao3_" + shader.color + ".png", 
+                                        width="300", 
+                                        height="245")                                
+                            div.box-shader-data 
+                                img(src="http://localhost:3000/assets/images/lateral_" + shader.color + ".png", 
+                                    width="240", 
+                                    height="170")
+                            div.box-shader-data 
+                                img(src="http://localhost:3000/assets/images/frontal_" + shader.color + ".png", 
+                                    width="240", 
+                                    height="170")             
+            tr
+                td(colspan="3", style="padding:0;") 
+                    div.style-total-value 
+                        strong Valor Total da Proposta: R$                      
+                        - var totalProposal = proposal.value.toFixed(2)                    
+                        - totalProposal = totalProposal.replace('.',',')
+                        span= totalProposal
+            tr 
+                td(colspan="3")        
+                    strong Forma de Pagamento 
+                    span= proposal.form_payment
+            tr 
+                td(colspan="3")
+                    strong Prazo de Entrega: 
+                    span= proposal.delivery_time
+            tr 
+                td(colspan="3")
+                    strong Validade da Proposta: 
+                    span= proposal.proposal_validity
+            tr 
+                td.incluso(colspan="3")
+                    strong Inclusos: 
+                    span Fabricação, frete, instalação, fundação e Mão de Obra
+            tr 
+                td(colspan="2", style="padding:0;")
+                    div.contact-style 
+                        strong Telefones: 
+                        span (11)2536-7185 / (11) 9.5794-2400
+                        br 
+                        strong E-mail: 
+                        span comercial@rrcoberturas.com.br
+            tr 
+                td(colspan="2")        
+                    strong Considerações: 
+                    span Este orçamento só terá valor de pedido mediante a assinatura do mesmo
+            tr 
+                td(colspan="2")        
+                    strong Data: ___/___/_____ 
+                    br 
+                    br 
+                    span _______________________
+                    br
+                    span Responsável
+            tr 
+                td(colspan="3")
+                    div.footer-print
+                        img(src="http://localhost:3000/assets/images/logo.png", 
+                            width="40", 
+                            height="40")
+                        span RRCberturas - Rua Januário Circo, 162 // Jd. São João Guarulhos - Cep: 07151-320 - www.rrcoberturas.com
+
+                    
+
+
+
+
 
 
             

@@ -12,5 +12,6 @@ router.get('/', find)
 router.get('/new', newProposal)
 router.post('/create', create)
 router.get('/view/:id', findone)
+router.delete('/:id', remove)
 
 export default router

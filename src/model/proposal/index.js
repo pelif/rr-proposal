@@ -43,6 +43,18 @@ const Proposal = new mongoose.Schema({
         type: Number, 
         required: true
     }, 
+    form_payment: {
+        type: String, 
+        default: 'Não especificado'
+    }, 
+    delivery_time: {
+        type: String, 
+        default: 'De 15 a 30 dias'
+    },
+    proposal_validity: {
+        type: String, 
+        default: '45 Dias'
+    }, 
     proposal_number: {
         type: String, 
         required: true

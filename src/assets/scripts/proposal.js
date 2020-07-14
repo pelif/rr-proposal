@@ -36,7 +36,13 @@ $(function() {
                 <input class="form-control" type="text" name="height">
               </td>
               <td colspan="2">
-                <input class="form-control" type="text" name="color">
+                <select class="form-control" name="color">
+                    <option value="azul">Azul</option>
+                    <option value="amarelo">Amarelo</option>
+                    <option value="verde">Verde</option>
+                    <option value="vermelho">Vermelho</option>
+                    <option value="prata">Prata</option>
+                </select>
               </td>
             </tr>`; 
 
