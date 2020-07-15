@@ -17,11 +17,9 @@ block content
                     each users in data
                         tr 
                             td= users.name 
-                            td= users.useraname
+                            td= users.username
                             td  
-                                form(action="/users/"+users.id+"?_method=DELETE", method="POST")
-                                    //- input(type="hidden", name="_method", value="DELETE")
-                                    //- input(type="hidden", name="id", value=users.id)
+                                form(action="/users/"+users.id+"?_method=DELETE", method="POST")                                    
                                     button.btn.btn-danger(type="submit") Excluir
                                         
     

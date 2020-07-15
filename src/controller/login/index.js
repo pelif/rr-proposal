@@ -4,7 +4,15 @@ import find from './find'
 
 const router = express.Router()
 
-router.get('/', login)
-// router.post('/', find)
+module.exports = (passport) => {
+    router.get('/', login)
+    router.post('/find', passport.authenticate('local-signin', {
+        successRedirect: '/', 
+        failureFlash: '/login?msg=2'
+    }))    
 
-export default router
+    return router
+}
+
+
+

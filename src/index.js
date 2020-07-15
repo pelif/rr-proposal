@@ -1,11 +1,8 @@
-import loginIndex from './controller/login/index'
-import home from './controller/home/index'
-import users from './controller/users/index'
-import proposal from './controller/proposal/index'
+module.exports  = (app, passport) => { 
 
-module.exports  = (app) => {
-    app.use('/login', loginIndex)
-    app.use('/', home)
-    app.use('/users', users)
-    app.use('/proposal', proposal)
-}
+    app.use('/login', require('./controller/login/index')(passport));    
+    app.use('/', require('./controller/home/index')(passport));
+    app.use('/users', require('./controller/users/index')(passport));
+    app.use('/proposal', require('./controller/proposal/index')(passport));
+
+};

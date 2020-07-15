@@ -8,9 +8,10 @@ import passport from 'passport'
 import session from 'express-session' 
 import mongoose from 'mongoose'
 
-
 const app = express()
 app.locals.moment = require('moment')
+
+require('./src/auth/local')(passport)
 
 app.use(cors())
 app.use(morgan('dev'))
@@ -36,7 +37,7 @@ let db = mongoose.connect(process.env.CONN, {
 })
 mongoose.Promise = global.Promise
 
-require('./src/index')(app)
+require('./src/index')(app, passport)
 
 app.listen(3000, () => {
     console.log('App rr-proposal has been started...')

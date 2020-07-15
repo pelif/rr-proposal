@@ -8,10 +8,13 @@ import remove from './remove'
 
 const router = express.Router()
 
-router.get('/', find)
-router.get('/new', newProposal)
-router.post('/create', create)
-router.get('/view/:id', findone)
-router.delete('/:id', remove)
+module.exports = (app, passport) => {
+    router.get('/', find)
+    router.get('/new', newProposal)
+    router.post('/create', create)
+    router.get('/view/:id', findone)
+    router.delete('/:id', remove)
 
-export default router
+    return router
+}
+
