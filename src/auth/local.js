@@ -61,7 +61,7 @@ module.exports = (passport) => {
                         console.log(`Debug Result var => ${result}`)
                         return callback(null, false)
                     }
-                    console.log(`Log in of user => ${user}`)
+                    console.log(`Success on Login`)
                     return callback(null, user)
                 })
             })

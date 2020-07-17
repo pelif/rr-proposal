@@ -1,6 +1,6 @@
 import express from 'express' 
 import login from './login'
-import find from './find'
+import logout from './logout'
 
 const router = express.Router()
 
@@ -10,6 +10,7 @@ module.exports = (passport) => {
         successRedirect: '/', 
         failureFlash: '/login?msg=2'
     }))    
+    router.get('/logout', logout)
 
     return router
 }

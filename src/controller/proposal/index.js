@@ -5,15 +5,16 @@ import findone from './findone'
 import create from './create'
 import update from './update'
 import remove from './remove'
+import isAuth from './../../auth/middleware'
 
 const router = express.Router()
 
 module.exports = (app, passport) => {
-    router.get('/', find)
-    router.get('/new', newProposal)
-    router.post('/create', create)
-    router.get('/view/:id', findone)
-    router.delete('/:id', remove)
+    router.get('/', isAuth, find)
+    router.get('/new', isAuth, newProposal)
+    router.post('/create', isAuth, create)
+    router.get('/view/:id', isAuth, findone)
+    router.delete('/:id', isAuth, remove)
 
     return router
 }

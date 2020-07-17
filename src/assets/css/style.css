@@ -91,3 +91,55 @@ a.dropdown-item:hover {
     width:80%; 
     border:1px solid red;
 }
+
+.logout-content {
+    float:right; 
+    margin-right:10px;    
+    color:white;
+}
+
+.logout-content a {
+    color:white;
+    font-weight:bold;
+}
+
+.logout-content a:hover {
+    color:#999; 
+    text-decoration:none;
+}
+
+.menu-beginer {
+    list-style-type: none;
+}
+
+li.nav-item img {
+    float:left; 
+    margin-top:8%;     
+}
+
+li.nav-item a {
+    float:left;
+}
+
+a.dropdown-item img {
+    float:left;
+    margin-top:4%;   
+    margin-right:10px; 
+}
+
+.dropdown-menu {
+    width:240px;
+}
+
+.title-home {
+    font-size: 1.5em;
+    font-weight:bold;
+}
+
+.title-home span {
+    margin-left:13px;
+}
+
+ul.menu-beginer li a {
+    margin-left:15px;
+}

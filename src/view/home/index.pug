@@ -1,4 +1,35 @@
 extends ./../layout/main
 
 block content 
-    h1 index App
+    div.app-body-content
+        div.header.title-home 
+            img(src="http://localhost:3000/assets/images/welcome-icon.svg",
+                width="40", 
+                height="40")
+            span Bem vindo ao RRProposal     
+        br
+        div.row 
+            div.alert.alert-info 
+                span Este é um sistema voltado ao gerenciamento de propostas da RRCoberturas. Neste sistema é possível cadastrar propostas bem com oconsultá-las. Ele serve para organizar e centralizar digitalmente as nossas propostas.                                     
+        div.row 
+            ul.menu-beginer
+                li 
+                    img(src="http://localhost:3000/assets/images/search-blue-icon.svg", 
+                        width="24", 
+                        height="24") 
+                    a.btn-link(href="/proposal") Consultar Propostas            
+                li 
+                    img(src="http://localhost:3000/assets/images/add-blue-icon.svg", 
+                        width="21", 
+                        height="21") 
+                    a.btn-link(href="/proposal/new") Cadastrar Nova Proposta
+                li 
+                    img(src="http://localhost:3000/assets/images/user-blue-icon.svg", 
+                        width="24", 
+                        height="32") 
+                    a.btn-link(href="/users") Consultar Usuários
+                li 
+                    img(src="http://localhost:3000/assets/images/adduser-blue-icon.svg", 
+                        width="24", 
+                        height="24") 
+                    a.btn-link(href="/users/new") Cadastrar Novo Usuário

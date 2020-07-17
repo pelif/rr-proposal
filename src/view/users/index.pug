@@ -3,8 +3,15 @@ extends ./../layout/main
 block content 
     div.app-body-content       
         h3 Usuários Cadastrados
-        if msg 
-            div.alert.alert-danger #{msg}
+        if message === 1             
+            div.alert.alert-success Usuário inserido com sucesso!
+        if message === 2 
+            div.alert.alert-danger Não foi possível inserir o usuário!  
+        if message === 3 
+            div.alert.alert-danger Ocorreu um erro ao tentar inserir o usuário!
+        if message === 4 
+            div.alert.alert-danger Não foi possível trazer dados no módulo de usuários!
+      
         div.row
             a.btn.btn-primary.font-weight-bold(href="/users/new") Criar Novo Usuário            
             table.table.table-striped

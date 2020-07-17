@@ -10,17 +10,17 @@ export default (req, res) => {
             .then((created) => {
                 if(!created) {
                     if(res.status(404)) {
-                        return res.redirect('/users')
+                        return res.redirect('/users?msg=2')
                     }    
                 }    
 
                 if(res.status(201)) {                    
-                    return res.redirect('/users')
+                    return res.redirect('/users?msg=1')
                 }
                 
             })
             .catch((err) => {                 
-                 return res.redirect('/users')
+                 return res.redirect('/users?msg=3')
             })   
 
             
