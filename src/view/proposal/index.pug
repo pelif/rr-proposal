@@ -2,6 +2,15 @@ extends ./../layout/main
 
 block content 
     div.app-body-content
+        if message === 1 
+            div.alert.alert-success A Proposta foi inserida com êxito! 
+        if message === 3 
+            div.alert.alert-danger Ocorreu um erro ao tentar buscar as propostas!           
+        if message === 4 
+            div.alert.alert-success A Proposta foi excluída com êxito! 
+        if message === 5 
+            div.alert.alert-danger Ocorreu um erro ao tentar excluir a proposta!    
+
         h3 Propostas Cadastradas
             table.table.table-striped
                 thead                    

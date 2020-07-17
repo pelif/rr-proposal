@@ -3,6 +3,10 @@ extends ./../layout/main
 block content 
     div.app-body-content
         div.app-container-forms
+            if message === 2 
+                div.alert.alert-danger Não foi possível cadastrar a proposta!
+            if message === 3 
+                div.alert.alert-danger Ocorreu um erro ao tentar cadastrar a proposta!
             h3 Cadastrar Nova Proposta
                 h5 Dados do Cliente
                     form(action="/proposal/create", method="post")

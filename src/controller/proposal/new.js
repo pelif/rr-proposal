@@ -6,6 +6,11 @@ export default (req, res) => {
         .findOne({}, [], { sort: {'created_at': -1} }, function(err, prop) {
             let lastNumber = parseInt(prop.proposal_number)             
             lastNumber++            
-            res.render('proposal/new', {proposalNumber: lastNumber})    
+            let viewParams = { proposalNumber: lastNumber }
+            if(req.query.msg) {
+                viewParams.message = parseInt(req.query.msg)
+            }
+            console.log(viewParams)
+            res.render('proposal/new', viewParams)    
         });        
 }

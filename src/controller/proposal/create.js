@@ -36,15 +36,14 @@ export default (req, res) => {
         .then((created) => {
             if(!created) {
                 if(res.status(404)) {
-                    return res.redirect('/proposal/new')
+                    return res.redirect('/proposal/new?msg=2')
                 }
             }
             if(res.status(201)) {
-                return res.redirect('/proposal')
+                return res.redirect('/proposal?msg=1')
             }
         })
-        .catch((err) => {
-            console.log(err)
-            // return res.redirect('/proposal')
+        .catch((err) => {            
+             return res.redirect('/proposal/new?msg=3')
         })
 }

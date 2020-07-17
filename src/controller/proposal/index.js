@@ -3,7 +3,6 @@ import newProposal from './new'
 import find from './find'
 import findone from './findone'
 import create from './create'
-import update from './update'
 import remove from './remove'
 import isAuth from './../../auth/middleware'
 

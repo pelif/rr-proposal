@@ -5,9 +5,13 @@ export default (req, res) => {
         .find({})
         .sort({'created_at': 'descending'})
         .then((data) => {
-            res.render('proposal/index', { proposals: data})
+            let viewParams = { proposals: data }
+            if(req.query.msg) {
+                viewParams.message = parseInt(req.query.msg)
+            }            
+            res.render('proposal/index', viewParams)
         })
         .catch((err) => {
-            res.render('proposal/index', { msg: 'Não foi possível encontrar propostas!' })
+            res.render('proposal/index', { message: 3 })
         })
 }

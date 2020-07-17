@@ -4,9 +4,9 @@ export default (req, res) => {
     User
         .findOneAndRemove({_id: req.params.id})
         .then((user) => {
-            res.redirect('/users?msg=2'); 
+            res.redirect('/users?msg=5'); 
         })
         .catch((err) => {
-            res.redirect('/users?msg=3'); 
+            res.redirect('/users?msg=6'); 
         })        
 }
