@@ -7,7 +7,7 @@ body {
     height:auto;
     border-radius: 8px;
     padding:12px;
-    margin-top:30px;
+    margin-top:7%;
     margin-right:auto; 
     margin-left:auto; 
     background-color:white;
@@ -142,4 +142,35 @@ a.dropdown-item img {
 
 ul.menu-beginer li a {
     margin-left:15px;
+}
+
+table.list-proposal tbody tr td {
+    font-size: 0.84em;
+    padding: 3px 5px;
+}
+
+#app-footer {    
+    position:absolute; 
+    /* margin-bottom:0; */
+    top: 100%;
+    background-color: #002A84; 
+    width: 100%;
+    font-size: 0.8555em;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding:10px 0;     
+}
+
+#app-footer2 {    
+    position:absolute; 
+    /* margin-bottom:0; */
+    top: 220%;
+    background-color: #002A84; 
+    width: 100%;
+    font-size: 0.8555em;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding:10px 0;     
 }

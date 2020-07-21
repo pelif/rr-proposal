@@ -20,6 +20,10 @@ const Proposal = new mongoose.Schema({
         type: String, 
         required: true
     },
+    village: {
+        type: String, 
+        default: 'Não informado'
+    },
     contact: {
         type: String        
     }, 

@@ -25,12 +25,20 @@ block content
                     span #{proposal.phone + " / " + proposal.phone2}
             tr 
                 td 
+                    strong Endereço: 
+                    span #{proposal.address}
+                td 
+                    strong Bairro: 
+                    span #{proposal.village}    
+                td 
                     strong Cidade: 
-                    span #{proposal.city}
+                    span #{proposal.city}    
+            tr 
+                
                 td 
                     strong Estado:   
                     span #{proposal.state}   
-                td 
+                td(colspan="2") 
                     strong E-mail: 
                     span #{proposal.email}
             tr

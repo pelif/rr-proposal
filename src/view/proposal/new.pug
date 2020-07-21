@@ -26,7 +26,12 @@ block content
                                 input.form-control(
                                     type="text", 
                                     name="address", 
-                                    placeholder="Endereço do Cliente")        
+                                    placeholder="Endereço do Cliente")  
+                            div.form-group 
+                                input.form-control(
+                                    type="text", 
+                                    name="village", 
+                                    placeholder="Digite o Bairro")              
                             div.form-group 
                                 input.form-control(
                                     type="text", 
@@ -68,6 +73,8 @@ block content
                                     type="text", 
                                     name="responsible_techinician", 
                                     placeholder="Responsável Técnico")  
+                            div.form-group    
+                                input.form-control(type="text", style="border-color:white;background-color:white;", disabled)   
                         
                         h5 Dados da Proposta            
                         div.container  
@@ -154,3 +161,4 @@ block content
                                 
                         button.btn.btn-success.col-md-12.font-weight-bold(type="submit") Cadastrar Proposta
                         script(src="http://localhost:3000/assets/scripts/proposal.js")                        
+    include ./../layout/footer2.pug                        
