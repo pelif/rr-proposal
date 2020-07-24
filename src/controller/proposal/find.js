@@ -4,6 +4,7 @@ export default (req, res) => {
     Proposal
         .find({})
         .sort({'created_at': 'descending'})
+        .limit(10)
         .then((data) => {
             let viewParams = { proposals: data }
             if(req.query.msg) {

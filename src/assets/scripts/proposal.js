@@ -52,8 +52,21 @@ $(function() {
     //remove table line of product 
     $("#rmSombra").on("click", function() {
         if($("#items-list-content tr").length > 1) {
-            $("#items-list-content tr").last().remove();
+           $("#items-list-content tr").last().remove();
         }        
+    }); 
+
+    //events on filters of proposal
+    $("#filter").on('change', function() {      
+        let valueFilter = parseInt($(this).val());
+        if(valueFilter == 1) {
+          var placeholder = 'Digite o Nome do Cliente';           
+        }
+        if(valueFilter == 2) {
+          var placeholder = 'Digite o CNPJ do Cliente'; 
+        }
+
+        $("#value").attr('placeholder', placeholder);  
     }); 
 
 }); 

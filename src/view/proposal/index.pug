@@ -10,10 +10,22 @@ block content
             div.alert.alert-success A Proposta foi excluída com êxito! 
         if message === 5 
             div.alert.alert-danger Ocorreu um erro ao tentar excluir a proposta!    
+        if messa === 6
+            div.alert.alert-danger Não foi possível buscar propostas com este filtro!    
 
         h3 Propostas Cadastradas
+            form(action="/proposal/filter", method="post")
+                div.form-group.mg-top-10 
+                    select.form-control.col-md-4(name="filter", id="filter")                        
+                        option(value="0") Selecione o filtro 
+                        option(value="1") Cliente 
+                        option(value="2") CNPJ
+                div.form-group        
+                    input.form-control.col-md-4(type="text", name="value", id="value")    
+                button.btn.btn-success.col-md-4(type="submit") Filtrar
+
             table.table.table-striped.list-proposal
-                thead                    
+                thead.thead-dark                   
                     tr
                         th Cliente
                         th Cnpj
@@ -30,9 +42,10 @@ block content
                             td= proposal.email
                             td= proposal.phone
                             td
-                                a.btn.btn-dark.btn-items(href="proposal/view/"+proposal._id, target="_blank") Ver                                
+                                a.btn.btn-dark.btn-items(href="/proposal/view/"+proposal._id, target="_blank") Ver                                
                                 form.btn-items(action="/proposal/" + proposal._id + "?_method=DELETE", method="POST")
                                     button.btn.btn-danger(type="submit") Excluir 
+    script(src="http://localhost:3000/assets/scripts/proposal.js")                                    
     include ./../layout/footer.pug
 
                     
