@@ -5,7 +5,14 @@ export default (req, res) => {
         .findOne({
             _id: req.params.id
         })
-        .then((data) => {            
+        .then((data) => {                        
+            if(data.proposal_details_items.length >= 7) {
+                var items = '';
+                for(var i = 0; i < data.proposal_details_items.length; i++) {
+                    items += data.proposal_details_items[i]; 
+                }
+                data.proposal_details_items = items;
+            }            
             res.render('proposal/view', {proposal: data})
         })
         .catch((err) => {

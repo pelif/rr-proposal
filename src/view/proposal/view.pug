@@ -47,13 +47,58 @@ block content
                     span #{proposal.responsible_techinician}            
             
             tr 
-                td(colspan="3")
-                    strong Items da Proposta: 
-                    br
-                    br
-                    each item, index in proposal.proposal_details_items 
-                        span= item   
-                        br    
+                td.text-proposal(colspan="3")
+                    strong Items Solicitados na Proposta: 
+                    br                    
+                    ul 
+                    each item in proposal.proposal_details_items                                             
+                        li= item                           
+                            br
+                    br    
+                    h6 MODELO SOMBREADOR
+                    ul 
+                        li Pilares em balanço L e duplo L;
+                        li Caída para quatro águas
+                        li Tela em polietileno permeável (diversas cores)    
+                        li Galvanização a fogo (Cliente específico Litoral)
+                        li Pintura eletrostática a pó branca;
+                    
+                    strong Estrutura Metálica 
+                    ul 
+                        li Estrutura em aço SAE 1020, fino a fino, com solda mig;
+                        li Postes (Pilar) de (114mm), parede de 5.00mm;
+                        li Mão Francesa de (88.9mm), parede de 3.75mm;
+                        li Extensor de (50.8mm), parede 3mm;
+                        li Calandrado de (50.8mm), parede de 2.65~3.00mm;
+                        li Cruzeta de (60.3mm), parede 3.5mm;
+                    strong Tela de Sombreamento
+                    ul 
+                        li Tela em polietileno de alta intensidade, não interfere na circulação do ar; 
+                        li Componente anti-mofo, aditivos contra raios ultravioletas;
+                        li Bloqueio solar em até 90% e total proteção contra granizo;
+                        li Redução da temperatura interna do veículo em cerca de 10ºC;
+                        li Confecionada com linha poliéster reforçada e pontas náuticas duplas; 
+                        li Tencionada com cabo de aço e ilhoses de latão nas pontas;
+                    strong TEST PAGE BREAK
+                    ul 
+                        li Tela em polietileno de alta intensidade, não interfere na circulação do ar; 
+                        li Componente anti-mofo, aditivos contra raios ultravioletas;
+                        li Bloqueio solar em até 90% e total proteção contra granizo;
+                        li Redução da temperatura interna do veículo em cerca de 10ºC;
+                        li Confecionada com linha poliéster reforçada e pontas náuticas duplas; 
+                        li Tencionada com cabo de aço e ilhoses de latão nas pontas;    
+
+                    strong Obrigações do Contratante
+                    ul
+                        li Fornecer material de alvenaria: pedra, areia e cimento; 
+                        li Fornecer caçamba para retirada do entulho, quando necessário; 
+                        li Dispor pontos de água e energia a no máximo 2 (dois) metros do local de instalação da cobertura; 
+                    strong Obrigações do Contratado
+                    ul 
+                        li Realizar a instalação completa do equipamento, desde a fundação até a instalação da tela; 
+                        li Garantir a entrega da cobertura em perfeitas condições de uso e aplicativo a que se propõe; 
+                        li Garantia de 5 (cinco) anos no equipamento; exceto para pintura e danos causados por qualquer tipo de fenômetnos da natureza; colisão, foto e materiais cortantes .
+
             tr 
                 td(colspan="3") 
                     strong Detalhes das Coberturas
@@ -105,7 +150,7 @@ block content
             tr 
                 td(colspan="3")        
                     strong Forma de Pagamento 
-                    span= proposal.form_payment
+                    span= proposal.form_payment                
             tr 
                 td(colspan="3")
                     strong Prazo de Entrega: 
@@ -138,6 +183,48 @@ block content
                     span _______________________
                     br
                     span Responsável
+            //- tr 
+            //-     td.client-logos(colspan="3")        
+            //-         strong Nossos Clientes
+            //-         br 
+            //-         br 
+            //-         img(src="http://localhost:3000/assets/images/logo-telhanorte.png", 
+            //-             width="70", 
+            //-             height="13")
+            //-         img(src="http://localhost:3000/assets/images/logo-assai.png", 
+            //-             width="70", 
+            //-             height="50")   
+            //-         img(src="http://localhost:3000/assets/images/logo-toyota.png", 
+            //-             width="65", 
+            //-             height="50")                        
+            //-         img(src="http://localhost:3000/assets/images/logo-porche.png", 
+            //-             width="60", 
+            //-             height="46")  
+            //-         img(src="http://localhost:3000/assets/images/logo-extra.png", 
+            //-             width="60", 
+            //-             height="37")                        
+            //-         img(src="http://localhost:3000/assets/images/logo-glasser.png", 
+            //-             width="60", 
+            //-             height="31")                              
+            //-         img(src="http://localhost:3000/assets/images/logo-gru-airport.png", 
+            //-             width="60", 
+            //-             height="27")           
+            //-         img(src="http://localhost:3000/assets/images/logo-lifan.png", 
+            //-             width="60", 
+            //-             height="41")    
+            //-         br      
+            //-         img(src="http://localhost:3000/assets/images/logo-mercado-barbosa.png", 
+            //-             width="60", 
+            //-             height="25")           
+            //-         img(src="http://localhost:3000/assets/images/logo-nita.png", 
+            //-             width="60", 
+            //-             height="55")        
+            //-         img(src="http://localhost:3000/assets/images/logo-park22.png", 
+            //-             width="60", 
+            //-             height="37")        
+            //-         img(src="http://localhost:3000/assets/images/logo-servparking.png", 
+            //-             width="75", 
+            //-             height="40")                            
             tr 
                 td(colspan="3")
                     div.footer-print

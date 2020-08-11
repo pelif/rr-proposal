@@ -133,3 +133,16 @@ body {
     color:white;
     text-align:center;
 }
+
+.table tbody tr td.client-logos {
+    padding:0 7%; 
+}
+
+.table tbody tr td.client-logos img {
+    margin-left:50px; 
+}
+
+.table tbody tr td.text-proposal {
+    font-size:0.95555em;
+    line-height:1.74em;
+}
